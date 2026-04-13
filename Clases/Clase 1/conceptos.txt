@@ -1,0 +1,4 @@
+
+Log- Linear Time:
+	- QuickSort
+	- MerseSort
