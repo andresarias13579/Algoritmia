@@ -1,0 +1,3 @@
+C:/Users/aml/Documents/DocumentosGit/Algoritmia/Laboratorios/Lab2/problemaGemini_TorresDeHanoi_1/cmake-build-debug/CMakeFiles/problemaGemini_TorresDeHanoi_1.dir
+C:/Users/aml/Documents/DocumentosGit/Algoritmia/Laboratorios/Lab2/problemaGemini_TorresDeHanoi_1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/aml/Documents/DocumentosGit/Algoritmia/Laboratorios/Lab2/problemaGemini_TorresDeHanoi_1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
