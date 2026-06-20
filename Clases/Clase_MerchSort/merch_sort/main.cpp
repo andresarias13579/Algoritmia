@@ -3,18 +3,23 @@
 
 using namespace std;
 
-void llenar(int *arreglo, int *arrDatos,int inicio,int fin) {
-    for (int i = inicio; i < fin; ++i) {
-        arreglo[i] = arrDatos[i];
-    }
-}
-
 void merge(int *arrDatos, int inicio, int centro, int fin) {
-    int arr1[centro],arr2[centro];
-    llenar(arr1,arrDatos,inicio,centro);
-    llenar(arr2,arrDatos,centro,fin);
+    int n1 = centro - inicio+1, n2 = fin - centro;
+    int arr1[n1],arr2[n2];
+    for (int i = 0; i < n1; ++i) {
+        arr1[i] = arrDatos[inicio + i];
+    }
+    for (int i = 0; i < n2; ++i) {
+        arr2[i] = arrDatos[centro + i +1];
+    }
+    int i = 0, j = 0, k = inicio;
+    while (i < n1 && j < n2) {
+        if (arr1[i] < arr2[j]) arrDatos[k++] = arr1[i++]; //los [i++] significa que primero entra al extrae el dato [i] y luego actualiza i++
+        else arrDatos[k++] = arr2[j++];
+    }
 
-    
+    while (i < n1) arrDatos[k++] = arr1[i++]; //en caso no haya llenado todo en i
+    while (j < n2) arrDatos[k++] = arr2[j++];// en caso no haya llenado todo en j
 }
 
 void merge_sort(int *arrDatos,int inicio,int fin) {
@@ -33,9 +38,7 @@ int main() {
     merge_sort(arrDatos,0,numDatos-1);
 
     for (int i = 0; i < numDatos; ++i) {
-        cout << arrDatos[i] << endl;
+        cout << arrDatos[i] <<"   ";
     }
-
-
     return 0;
 }
